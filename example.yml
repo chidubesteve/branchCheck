@@ -1,0 +1,11 @@
+name: "Check Branch Name"
+description: "Checks if the current branch matches the allowed branch."
+author: "chidubesteve"
+inputs:
+  allowed_branch:
+    description: "Branch to check for (e.g. main)"
+    required: false
+    default: "main"
+runs:
+  using: "node20"
+  main: "index.js"
