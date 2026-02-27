@@ -8,21 +8,4 @@ inputs:
     default: "main"
 runs:
   using: "node20"
-  main: "index.js"
-
-jobs:
-  build:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    -name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-
-    - name: Install dependencies
-      run: npm ci # Installs dependencies based on package-lock.json and faster too
-
-
+  main: "dist/index.js"

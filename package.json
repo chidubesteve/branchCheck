@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chidubesteve/branchCheck.git"
   },
-    "dependencies": {
-      "@actions/core": "^2.0.1"
-  }
-    ,
+  "dependencies": {
+    "@actions/core": "^2.0.1",
+    "@actions/github": "^9.0.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/chidubesteve/branchCheck/issues"
   },
-  "homepage": "https://github.com/chidubesteve/branchCheck#readme"
+  "homepage": "https://github.com/chidubesteve/branchCheck#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4"
+  }
 }
